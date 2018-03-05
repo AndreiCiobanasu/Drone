@@ -1,0 +1,50 @@
+body {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding-top: 300px;
+}
+
+.container {
+	width: 256px;
+	height: 256px;
+}
+
+.drone {
+	width: 256px;
+	height: 256px;
+	border-radius: 0 0 50% 50%;
+	overflow: hidden;
+}
+
+img {
+	width: 250px;
+}
+
+div {
+	border: 1px solid black;
+}
+
+@keyframes drone {
+	0%   {}
+	25%  {transform: rotate(30deg);}
+	50%  {transform: translate(150px, 50px);}
+	75%  {transform: rotate(-20deg);}
+	100% {transform: translate(-150px; -50px);}
+}
+
+@keyframes div {
+	0%   {}
+	25%  {height: 128px;}
+	50%  {height: 159px;}
+	75%  {height: 184px;}
+	100% {height: 256px;}
+}
+
+.container {
+	animation: drone 8s ease-in-out infinite alternate;
+}
+
+.drone {
+	animation: div 2s steps(1, start) infinite;
+}
